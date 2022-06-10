@@ -2,7 +2,7 @@
  * @param {int} milliseconds
  * @returns {string}
  */
-function msToHHMMSSXXX(milliseconds) {
+function mstohhmmss(milliseconds, includeFractions = false) {
   let seconds = milliseconds / 1000;
   const [sec, dec] = parseFloat(seconds).toFixed(3).split(".");
 
@@ -29,16 +29,21 @@ function msToHHMMSSXXX(milliseconds) {
   const mm = m.toString().padStart(2, "0");
   const ss = s.toString().padStart(2, "0");
   const mmm = dec;
-  return `${hh}:${mm}:${ss}.${mmm}`;
+
+  if (includeFractions === true) {
+    return `${hh}:${mm}:${ss}.${mmm}`;
+  }
+  return `${hh}:${mm}:${ss}`;
 }
-exports.msToHHMMSSXXX = msToHHMMSSXXX;
+
+exports.mstohhmmss = mstohhmmss;
 
 /**
  *
  * @param {float | int} seconds
  * @returns {string}
  */
-function secToHHMMSSXXX(seconds) {
-  return msToHHMMSSXXX(seconds * 1000);
+function sectohhmmss(seconds, includeFractions = false) {
+  return mstohhmmss(seconds * 1000, includeFractions);
 }
-exports.secToHHMMSSXXX = secToHHMMSSXXX;
+exports.sectohhmmss = sectohhmmss;
