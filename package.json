@@ -1,5 +1,5 @@
 {
-  "name": "hhmmssxxx",
+  "name": "@jrohlandt/hhmmss",
   "version": "1.0.0",
   "description": "Convert seconds and milliseconds to a HH:mm:ss.SSS formatted string.",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jrohlandt/hhmmssxxx.git"
+    "url": "git+https://github.com/jrohlandt/hhmmss.git"
   },
   "author": "Jeandré Rohlandt",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jrohlandt/hhmmssxxx/issues"
+    "url": "https://github.com/jrohlandt/hhmmss/issues"
   },
-  "homepage": "https://github.com/jrohlandt/hhmmssxxx#readme",
+  "homepage": "https://github.com/jrohlandt/hhmmss#readme",
   "devDependencies": {
     "jest": "^28.1.1"
   }
